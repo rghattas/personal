@@ -1,5 +1,5 @@
 import React from "react";
-import photo from "../../me.png";
+import photo from "../../images/me.png";
 import "./Info.css";
 
 const Info = () => {
