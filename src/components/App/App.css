@@ -1,0 +1,14 @@
+.main {
+  display: block;
+  margin: auto;
+  width: 50%;
+  min-width: 840px;
+}
+
+@media screen and (max-width: 840px) {
+  .main {
+    width: 100%;
+    min-width: auto;
+    padding: 24px;
+  }
+}

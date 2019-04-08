@@ -1,14 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Inconsolata:400,700");
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, "Inconsolata", monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --text-color: #222;
+  --text-color2: #634b66;
+  --background-color: #f8f5f5;
+  --link-color: #634b66;
+  --link-hover-color: #efefef;
+  font-size: 1em;
+  line-height: 1.5em;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: all 0.25s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media (prefers-color-scheme: dark) {
+  body {
+    --background-color: #282c35;
+    --text-color: #fff;
+    --text-color2: #a28f9d;
+    --link-color: #a28f9d;
+    --link-hover-color: #efefef;
+    background-color: var(--background-color);
+  }
+}
+
+body.dark {
+  --background-color: #282c35;
+  --text-color: #fff;
+  --text-color2: #a28f9d;
+  --link-color: #a28f9d;
+  --link-hover-color: #efefef;
+  background-color: var(--background-color);
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #e6e6fa;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive, sans-serif;
+  font-weight: 700;
+  color: var(--text-color2);
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+a,
+a:active {
+  display: inline-block;
+  position: relative;
+  text-decoration: underline;
+  text-decoration-skip-ink: ink;
+  opacity: 1;
+  color: var(--link-color);
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--link-hover-color);
+  outline: none;
+  cursor: pointer;
+}
+
+a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--link-color);
+  z-index: -1;
+  transition: all 0.1s cubic-bezier(0, 0.59, 1, 0.26);
+}
+
+a:hover:after,
+a:focus:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--link-color);
+  z-index: -1;
 }

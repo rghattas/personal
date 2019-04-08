@@ -1,0 +1,43 @@
+.info {
+  padding-top: 8rem;
+  display: grid;
+  grid-template-columns: 256px repeat(2, 1fr);
+  grid-gap: 24px;
+  grid-template-areas:
+    "portrait name name"
+    "portrait bio bio";
+}
+
+.info__name {
+  grid-area: name;
+}
+
+.info__portrait {
+  grid-area: portrait;
+  width: 100%;
+  border-radius: 10%;
+}
+
+.info__bio {
+  grid-area: bio;
+}
+
+@media screen and (max-width: 840px) {
+  .info {
+    padding-top: 2rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "portrait" "name" "bio";
+    justify-content: center;
+    text-align: center;
+  }
+
+  .info__portrait {
+    width: 140px;
+    margin: auto;
+  }
+
+  .info__bio {
+    text-align: justify;
+  }
+}
