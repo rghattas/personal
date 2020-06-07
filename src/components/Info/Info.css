@@ -4,7 +4,7 @@
   grid-template-columns: 256px repeat(2, 1fr);
   grid-gap: 24px;
   grid-template-areas:
-    "portrait name name"
+    ". name name"
     "portrait bio bio";
 }
 

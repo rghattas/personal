@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import Info from "../Info";
+
 import "./App.css";
 
 const App = () => {
